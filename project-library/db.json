@@ -1,0 +1,20 @@
+{
+  "Livros": [
+    {
+      "id": "1",
+      "name": "Morte no Nilo",
+      "author": "Agatha Cristie",
+      "description": "Assassinato / Mistério",
+      "price": 50,
+      "quantity": 10
+    },
+    {
+      "id": "e3a7",
+      "name": "Harry potter",
+      "author": "JK Rowling",
+      "description": "Teste",
+      "price": "150",
+      "quantity": "3"
+    }
+  ]
+}

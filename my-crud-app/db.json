@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "id": "8915",
+      "name": "Aerofolio Palio 2",
+      "description": "Aerofolio para o Palio do teu pai",
+      "price": "500.50",
+      "quantity": "5"
+    }
+  ]
+}
