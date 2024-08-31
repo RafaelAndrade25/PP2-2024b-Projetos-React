@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { createbooks, getbookById, updatebooks } from '../services/api';
@@ -13,7 +14,7 @@ function BooksForm() {
     const navigate = useNavigate();
     const [books, setbooks] = useState<books>({
         name: '',
-        author:'',
+        author: '',
         description: '',
         price: 0,
         quantity: 0,
@@ -52,52 +53,54 @@ function BooksForm() {
     };
     return (
         <form onSubmit={handleSubmit}>
-            <div>
-                <label>Name</label>
-                <input
-                    type="text"
-                    name="name"
-                    value={books.name}
-                    onChange={handleChange}
-                />
+            <div className='formulario'>
+                <div>
+                    <label>Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        value={books.name}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Author</label>
+                    <input
+                        type="text"
+                        name="author"
+                        value={books.author}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Description</label>
+                    <input
+                        type="text"
+                        name="description"
+                        value={books.description}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Price</label>
+                    <input
+                        type="number"
+                        name="price"
+                        value={books.price}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Quantity</label>
+                    <input
+                        type="number"
+                        name="quantity"
+                        value={books.quantity}
+                        onChange={handleChange}
+                    />
+                </div>
+                <button type="submit">Save</button>
             </div>
-            <div>
-                <label>Author</label>
-                <input
-                    type="text"
-                    name="author"
-                    value={books.author}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Description</label>
-                <input
-                    type="text"
-                    name="description"
-                    value={books.description}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Price</label>
-                <input
-                    type="number"
-                    name="price"
-                    value={books.price}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Quantity</label>
-                <input
-                    type="number"
-                    name="quantity"
-                    value={books.quantity}
-                    onChange={handleChange}
-                />
-            </div>
-            <button type="submit">Save</button>
         </form>
     );
 }

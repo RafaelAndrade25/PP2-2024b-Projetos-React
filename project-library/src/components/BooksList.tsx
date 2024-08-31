@@ -29,9 +29,9 @@ function BooksList() {
             <ul>
                 {books.map((books) => (
                     <li key={books.id}>
-                        {books.name} - ${books.price} - {books.quantity} units
-                        <Link to={`/edit/${books.id}`}>Edit</Link>
-                        <button onClick={() => handleDelete(books.id)}>Delete</button>
+                        {books.name} | ${books.price} | {books.quantity} units |
+                        <button><Link to={`/edit/${books.id}`}> Edit </Link></button>
+                        <button onClick={() => handleDelete(books.id)}> Delete </button>
                     </li>
                 ))}
             </ul>
